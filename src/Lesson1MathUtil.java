@@ -30,6 +30,7 @@ public class Lesson1MathUtil {
 
     public static int abs(int a){
         // TODO tagasta a absoluut arv
+        // abs(a) korral viskab erroreid
         if (a > 0) {
             return a;
         } else {
