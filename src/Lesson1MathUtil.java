@@ -1,10 +1,10 @@
 public class Lesson1MathUtil {
 
     public static void main(String[] args) {
-        System.out.println(min(30,45));
-        System.out.println(max(130,75));
-        System.out.println(abs(-75));
-        System.out.println(isEven(45));
+        System.out.println("Min: "+min(45,35));
+        System.out.println("Max: "+max(69,75));
+        System.out.println("Absoluutväärtus: "+abs(-65));
+        System.out.println("Kas paaris? "+isEven(46));
         System.out.println(min(36,45,21));
         System.out.println(max(84,96,71));
     }
