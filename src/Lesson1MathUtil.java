@@ -1,6 +1,12 @@
+import java.util.Scanner;
+
 public class Lesson1MathUtil {
 
+
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        String rida = scanner.nextLine();
         System.out.println("Min: "+min(45,35));
         System.out.println("Max: "+max(69,75));
         System.out.println("Absoluutväärtus: "+abs(-65));
@@ -8,6 +14,7 @@ public class Lesson1MathUtil {
         System.out.println(min(36,45,21));
         System.out.println(max(84,96,71));
     }
+
 
     public static int min(int a, int b) {
         // TODO tagasta a ja b väikseim väärtus
