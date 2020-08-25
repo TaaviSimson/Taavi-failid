@@ -5,7 +5,7 @@ public class Lesson2 {
 
     public static void main(String[] args) {
         //exercise1();
-        exercise2(4);
+        //exercise2(4);
         exercise3(2, 5);
         fibonacci(5);
         exercise5();
@@ -46,6 +46,17 @@ public class Lesson2 {
     public static void exercise3(int x, int y) {
         // TODO trüki välja korrutustabel mis on x ühikut lai ja y ühikut kõrge
         // TODO näiteks x = 3 y = 3
+        System.out.println("Sisesta tabeli korrutustabeli laius ja kõrgus x1 ja y1");
+        Scanner scanner = new Scanner(System.in); //loob uue skänneri
+        int x1 = scanner.nextInt();
+        int y1 = scanner.nextInt();
+        System.out.println("");
+        for (int i=1; i <= x1; i++){
+            for (int j = 1; j <= y1; j++){
+                System.out.print(i*j+" ");//print println asemel jätab ühele reale
+            }
+            System.out.println();//Tekitab uue rea kui i on iga j-ga läbi korrutatud
+        }
         // TODO väljund
         // 1 2 3
         // 2 4 6
