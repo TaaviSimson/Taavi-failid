@@ -5,14 +5,39 @@ public class Lesson1MathUtil {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
-        String rida = scanner.nextLine();
-        System.out.println("Min: "+min(45,35));
-        System.out.println("Max: "+max(69,75));
-        System.out.println("Absoluutväärtus: "+abs(-65));
-        System.out.println("Kas paaris? "+isEven(46));
-        System.out.println(min(36,45,21));
-        System.out.println(max(84,96,71));
+        System.out.println("Sistesta soovitud test: min, max, abs, isEven, min1 või max2");
+        String test = scanner.nextLine(); //Loeb millist teksti hakkame tegema
+        System.out.println("Sisesta parameetrid a, b ja c");
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        int c = scanner.nextInt();
+        System.out.println("");//jätab rea vahele
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c + "\n");//jätab rea vahele (+"\n")
+        System.out.println("Vastus:");
+
+        //String test = "min";
+        if (test.equalsIgnoreCase("min")){
+            System.out.println(min(a,b));
+        } else if (test.equalsIgnoreCase("abs")){
+            System.out.println(abs(a));
+        } else if (test.equalsIgnoreCase("max")){
+            System.out.println(max(a,b));
+        } else if (test.equalsIgnoreCase("isEven")){
+            System.out.println(isEven(a));
+        } else if (test.equalsIgnoreCase("min2")){
+            System.out.println(min2(a,b,c));
+        } else {
+            System.out.println(max2(a, b, c));
+        }
+
+        //System.out.println("Min: "+min(45,35));
+        //System.out.println("Max: "+max(69,75));
+        //System.out.println("Absoluutväärtus: "+abs(-65));
+        //System.out.println("Kas paaris? "+isEven(46));
+        //System.out.println(min2(36,45,21));
+        //System.out.println(max2(84,96,71));
     }
 
 
@@ -55,7 +80,7 @@ public class Lesson1MathUtil {
         }
     }
 
-    public static int min(int a, int b, int c){
+    public static int min2(int a, int b, int c){
         // TODO tagasta a, b ja c väikseim väärtus
         if (a < b && a < c) {
             return a;
@@ -66,7 +91,7 @@ public class Lesson1MathUtil {
         }
     }
 
-    public static int max(int a, int b, int c){
+    public static int max2(int a, int b, int c){
         // TODO tagasta a, b ja c suurim väärtus
         if (a > b && a > c) {
             return a;
