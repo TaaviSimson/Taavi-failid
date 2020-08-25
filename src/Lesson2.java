@@ -7,7 +7,7 @@ public class Lesson2 {
         //exercise1();
         //exercise2(4);
         //exercise3(2, 5);
-        fibonacci(5);
+        //fibonacci(5);
         exercise5();
     }
 
@@ -75,8 +75,8 @@ public class Lesson2 {
         int fib2 = 1;
         int fibn = 0;
         for (int i = 0; i < n1-2; i++){
-            fibn = fib1 + fib2;// fibn = fib0+ fib1 = 0 + 1 = 1
-            //fibn vastab 0 + 1 = 1 (kolmas number jadas), seepärast n1-2
+            fibn = fib1 + fib2;// fibn = fib1+ fib2 = 0 + 1 = 1
+            //fibn vastab fib3 (kolmas number jadas), seepärast n1-2
             fib1 = fib2; // fib1 = 1
             fib2 = fibn; // fib2 = 1
         }
@@ -89,6 +89,30 @@ public class Lesson2 {
 
     public static void exercise5() {
         // https://onlinejudge.org/index.php?option=onlinejudge&Itemid=8&page=show_problem&problem=36
+        System.out.println("Sisesta 2 numbrit 1 ja 10 000 vahel");
+        Scanner scanner = new Scanner(System.in);
+        int i = scanner.nextInt(); // 1. arv
+        int j = scanner.nextInt(); // 2. arv
+        int maxpikkus = 0;// maksimaalne jada pikkus
+        for (int k = i; k <= j; k++) {
+            int pikkus = 1;// Jada pikkus 1-ni jõudmiseks arvu k puhul
+            int k1 = k; //Annab k1-le väärtuse k, ehk number mida vaatleme
+            while (k1 != 1) {
+
+                if (k1 % 2 != 0) {
+                    k1 = 3 * k1 + 1;
+                } else {
+                    k1 = k1 / 2;
+                }
+                pikkus++;//Suurendab k1 jada pikkuse lugerit
+            }
+        if (maxpikkus < pikkus){ //Võrleb hetkel olevat maksimumpikkust leitud pikkusega
+            maxpikkus = pikkus; //Seab maksimumpikkuse leitud suuriima pikkusega võrdseks
+        }
+        }
+        System.out.println("");
+        System.out.println("Vastus:");
+        System.out.println(i+" "+j+" "+maxpikkus);
     }
 
     public static void exercise6() {
