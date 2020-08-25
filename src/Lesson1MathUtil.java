@@ -7,7 +7,7 @@ public class Lesson1MathUtil {
         Scanner scanner = new Scanner(System.in);//Loob uue skänneri
         System.out.println("Sistesta soovitud test: min, max, abs, isEven, min2 või max2");
         String test = scanner.nextLine(); //Loeb millist teksti hakkame tegema
-        System.out.println("");//jätab rea vahele
+        System.out.println("");//jätab rea vahele, voi "+\n"?
 
 
         //String test = "min";
