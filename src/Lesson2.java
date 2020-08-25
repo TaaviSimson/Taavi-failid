@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Lesson2 {
 
     public static void main(String[] args) {
-        exercise1();
+        //exercise1();
         exercise2(4);
         exercise3(2, 5);
         fibonacci(5);
@@ -31,6 +31,14 @@ public class Lesson2 {
     public static void exercise2(int x) {
         // TODO prindi välja x esimest paaris arvu
         // Näide:
+        System.out.println("");
+        System.out.println("Sisesta number mitut järjestiku paariarvu soovid näha");
+        Scanner scanner = new Scanner(System.in); //loob uue skänneri
+        int a = scanner.nextInt();
+        System.out.println("");
+        for(int i=1; i <= a; i++){
+            System.out.println(2*i);
+        }
         // Sisend 5
         // Väljund 2 4 6 8 10
     }
