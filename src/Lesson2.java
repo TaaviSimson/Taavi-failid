@@ -6,7 +6,7 @@ public class Lesson2 {
     public static void main(String[] args) {
         //exercise1();
         //exercise2(4);
-        exercise3(2, 5);
+        //exercise3(2, 5);
         fibonacci(5);
         exercise5();
     }
@@ -67,6 +67,22 @@ public class Lesson2 {
         // TODO
         // Fibonacci jada on fib(n) = fib(n-1) + fib(n-2);
         // 0, 1, 1, 2, 3, 5, 8, 13, 21
+        System.out.println("Mitmendat Fibonacci jada elementi otsid?");
+        Scanner scanner = new Scanner(System.in);
+        int n1 = scanner.nextInt();
+        System.out.println("");
+        int fib1 = 0;
+        int fib2 = 1;
+        int fibn = 0;
+        for (int i = 0; i < n1-2; i++){
+            fibn = fib1 + fib2;// fibn = fib0+ fib1 = 0 + 1 = 1
+            //fibn vastab 0 + 1 = 1 (kolmas number jadas), seepärast n1-2
+            fib1 = fib2; // fib1 = 1
+            fib2 = fibn; // fib2 = 1
+        }
+        System.out.println("Vastus:");
+        System.out.println(fibn);
+
         // Tagasta fibonacci jada n element
         return 0;
     }
