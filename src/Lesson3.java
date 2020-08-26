@@ -5,7 +5,7 @@ public class Lesson3 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Sisesta käsklus: summma, massiiv, faktoriaal");
+        System.out.println("Sisesta käsklus: summma, massiiv, faktoriaal, sordi, tagurpidi");
         String kasklus = scanner.nextLine();
         System.out.println("");
 
@@ -31,8 +31,25 @@ public class Lesson3 {
             int a = scanner.nextInt();
             System.out.println("");
             System.out.println("Arvu "+a+" faktoriaal on:"+faktoriaal(a));
-        } else {
+        } else if (kasklus.equalsIgnoreCase("sordi")){
+            System.out.println("Siseta massivi suurus x (Vahemikus 2-10)");
+            int a = scanner.nextInt();
             System.out.println("");
+            int[] c = new int[a];
+            System.out.println("Sisesta "+a+" numbrit.");
+            for (int i = 0; i < c.length; i++){
+                c[i] = scanner.nextInt();
+            }
+            System.out.println("");
+            System.out.println("Numbrid reastatuna on:");
+            System.out.print(sordi(c)+" ");
+        } else if (kasklus.equalsIgnoreCase("tagurpidi")) {
+            System.out.println("Sisestasid sõna");
+            String sona = scanner.nextLine();
+            System.out.println("");// "+\n"
+            System.out.println("Sinu sõna tagurpidi on "+tagurpidi(sona));
+        } else{
+            System.out.println("Sisestasid vale käskluse");
         }
 
     }
@@ -61,23 +78,31 @@ public class Lesson3 {
         int a = 1; //Siin peab olema 1, muidu vastus pidevalt 0
         for (int i = 1; i <= x; i++){
             a *= i;
-        };
+        }
         return a;
     }
 
-    public static int[] sort(int[] a) {
+    public static int[] sordi(int[] a) {
         // TODO sorteeri massiiv suuruse järgi
         // Näiteks {2, 6, 8, 1}
         // Väljund {1, 2, 6, 8}
-        return new int[0];
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] >  a[i+1]){
+                int ajutine = a[i];
+                a[i] = a[i+1];
+                a[i+1] = ajutine;
+                i = -1; // Vajalik selleks, et ta hakkaks algusest peale järgmist loopi
+            }
+        }
+        return a; // new int [0]
     }
 
-    public static String reverseString(String a) {
+    public static String tagurpidi(String a) {
         // TODO tagasta string tagurpidi
         // Näiteks:
         // a = "Test";
         // return tseT";
-        return "";
+        return a; //" "
     }
 
     public static boolean isPrime(int x){

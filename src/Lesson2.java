@@ -4,11 +4,11 @@ import java.util.Scanner;
 public class Lesson2 {
 
     public static void main(String[] args) {
-        //exercise1();
+        exercise1();
         //exercise2(4);
         //exercise3(2, 5);
         //fibonacci(5);
-        exercise5();
+        //exercise5();
     }
 
     public static void exercise1() {
@@ -24,7 +24,7 @@ public class Lesson2 {
         System.out.println("");
         // TODO trüki arvud välja vastupidises järiekorras
         for (int i = m.length-1; i >= 0; i--) {
-            System.out.println(m[i]);
+            System.out.print(m[i]+" ");
         }
     }
 
