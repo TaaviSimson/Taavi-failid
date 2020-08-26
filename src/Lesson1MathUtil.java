@@ -11,40 +11,40 @@ public class Lesson1MathUtil {
 
 
         //String test = "min";
-        if (test.equalsIgnoreCase("min")){
+        if (test.equalsIgnoreCase("min")) {
             System.out.println("Sisesta parameetrid a ja b");
             int a = scanner.nextInt();
             int b = scanner.nextInt();
             System.out.println("");//jätab rea vahele
             System.out.println("Vastus:");
-            System.out.println(min(a,b));
-        } else if (test.equalsIgnoreCase("abs")){
+            System.out.println(min(a, b));
+        } else if (test.equalsIgnoreCase("abs")) {
             System.out.println("Sisesta parameetrer a");
             int a = scanner.nextInt();
             System.out.println("");//jätab rea vahele
             System.out.println("Vastus:");
             System.out.println(abs(a));
-        } else if (test.equalsIgnoreCase("max")){
+        } else if (test.equalsIgnoreCase("max")) {
             System.out.println("Sisesta parameetrid a ja b");
             int a = scanner.nextInt();
             int b = scanner.nextInt();
             System.out.println("");//jätab rea vahele
             System.out.println("Vastus:");
-            System.out.println(max(a,b));
-        } else if (test.equalsIgnoreCase("isEven")){
+            System.out.println(max(a, b));
+        } else if (test.equalsIgnoreCase("isEven")) {
             System.out.println("Sisesta parameetrer a");
             int a = scanner.nextInt();
             System.out.println("");//jätab rea vahele
             System.out.println("Vastus:");
             System.out.println(isEven(a));
-        } else if (test.equalsIgnoreCase("min2")){
+        } else if (test.equalsIgnoreCase("min2")) {
             System.out.println("Sisesta parameetrid a, b ja c");
             int a = scanner.nextInt();
             int b = scanner.nextInt();
             int c = scanner.nextInt();
             System.out.println("");//jätab rea vahele
             System.out.println("Vastus:");
-            System.out.println(min2(a,b,c));
+            System.out.println(min2(a, b, c));
         } else {
             System.out.println("Sisesta parameetrid a, b ja c");
             int a = scanner.nextInt();
@@ -74,7 +74,7 @@ public class Lesson1MathUtil {
     }
 
 
-    public static int max(int a, int b){
+    public static int max(int a, int b) {
         // TODO tagasta a ja b suurim väärtus
         if (a > b) {
             return a;
@@ -83,7 +83,7 @@ public class Lesson1MathUtil {
         }
     }
 
-    public static int abs(int a){
+    public static int abs(int a) {
         // TODO tagasta a absoluut arv
         // abs(a) korral viskab erroreid
         if (a > 0) {
@@ -93,9 +93,9 @@ public class Lesson1MathUtil {
         }
     }
 
-    public static boolean isEven(int a){
+    public static boolean isEven(int a) {
         // TODO tagasta true, kui a on paaris arv
-        if (a % 2 == 0){
+        if (a % 2 == 0) {
             return true;
         } else {
             // tagasta false kui a on paaritu arv
@@ -103,22 +103,22 @@ public class Lesson1MathUtil {
         }
     }
 
-    public static int min2(int a, int b, int c){
+    public static int min2(int a, int b, int c) {
         // TODO tagasta a, b ja c väikseim väärtus
         if (a < b && a < c) {
             return a;
-        } else if (b < c){
+        } else if (b < c) {
             return b;
         } else {
             return c;
         }
     }
 
-    public static int max2(int a, int b, int c){
+    public static int max2(int a, int b, int c) {
         // TODO tagasta a, b ja c suurim väärtus
         if (a > b && a > c) {
             return a;
-        } else if (b > c){
+        } else if (b > c) {
             return b;
         } else {
             return c;
