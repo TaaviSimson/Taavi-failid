@@ -119,6 +119,8 @@ public class Lesson3 {
         int temp = 0; // Ajutine number jaguvuse kontrollimiseks
         for (int i = 2; i <= num/2; i++){ // Alustab 2-st ja jagab iga järgmise arvuga
             temp = num % i;
+            //Kuna kontrollime jääki, siis n/2 on mõistlik max i väärtus
+            //jagades nt 11:6 või 21:11, ei saa jääk 0 tekkida
             if (temp == 0){
                 return false;
             }
