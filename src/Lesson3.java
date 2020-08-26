@@ -15,7 +15,7 @@ public class Lesson3 {
             System.out.println("Sisesta liidetavad arvud a ja b");
             int a = scanner.nextInt();
             int b = scanner.nextInt();
-            System.out.println("\n"+"Arvude a ja b summa on " + summa(a, b));
+            System.out.println("\n" + "Arvude a ja b summa on " + summa(a, b));
         } else if (kasklus.equalsIgnoreCase("massiiv")) {
             System.out.println("Siseta massivi suurus x (Vahemikus 2-10)");
             int a = scanner.nextInt();
@@ -25,32 +25,32 @@ public class Lesson3 {
             for (int i = 0; i < c.length; i++) {
                 c[i] = scanner.nextInt();
             }
-            System.out.println("\n"+"Massiivis olevate numbrite summa on " + massiiv(c));
+            System.out.println("\n" + "Massiivis olevate numbrite summa on " + massiiv(c));
         } else if (kasklus.equalsIgnoreCase("faktoriaal")) {
             System.out.println("Millise numbri faktoriaali otsid?");
             int a = scanner.nextInt();
-            System.out.println("\n"+"Arvu " + a + " faktoriaal on:" + faktoriaal(a));
+            System.out.println("\n" + "Arvu " + a + " faktoriaal on:" + faktoriaal(a));
         } else if (kasklus.equalsIgnoreCase("sordi")) {
             System.out.println("Siseta massivi suurus x (Vahemikus 2-10)");
             int a = scanner.nextInt();
             int[] c = new int[a];
-            System.out.println("\n"+"Sisesta " + a + " numbrit.");
+            System.out.println("\n" + "Sisesta " + a + " numbrit.");
             for (int i = 0; i < c.length; i++) {
                 c[i] = scanner.nextInt();
             }
-            System.out.println("\n"+"Numbrid reastatuna on:");
+            System.out.println("\n" + "Numbrid reastatuna on:");
             System.out.print(Arrays.toString(sordi(c)) + " ");//Arrays to String, muidu ei saa välja printida
         } else if (kasklus.equalsIgnoreCase("tagurpidi")) {
             System.out.println("Siseesta palun sõna");
             String sona = scanner.nextLine();
-            System.out.println("\n"+"Sinu sõna tagurpidi on " + tagurpidi(sona));
+            System.out.println("\n" + "Sinu sõna tagurpidi on " + tagurpidi(sona));
         } else if (kasklus.equalsIgnoreCase("algarv")) {
             System.out.println("Sisesta arv");
             int a = scanner.nextInt();
-            if (algarv(a)){
-                System.out.println("\n"+"Sisestatud arv on algarv");
+            if (algarv(a)) {
+                System.out.println("\n" + "Sisestatud arv on algarv");
             } else {
-                System.out.println("\n"+"Sisestatud arv ei ole algarv");
+                System.out.println("\n" + "Sisestatud arv ei ole algarv");
             }
         } else {
             System.out.println("Sisestasid vale käskluse");
@@ -107,21 +107,21 @@ public class Lesson3 {
         // a = "Test";
         // return tseT";
         String tagurpidi = "";
-        for (int i = (a.length()-1); i >= 0; i-- ){ //String pikkuse järel sulud a.length()
-            tagurpidi = tagurpidi + a.substring(i, i+1);
+        for (int i = (a.length() - 1); i >= 0; i--) { //String pikkuse järel sulud a.length()
+            tagurpidi = tagurpidi + a.substring(i, i + 1);
         }
         return tagurpidi; //" "
     }
 
-    public static boolean algarv(int x){//Motle kodus
+    public static boolean algarv(int x) {//Motle kodus
         // TODO tagasta kas sisestatud arv on primaar arv (jagub ainult 1 ja iseendaga)
         int num = x; //Annab numbrile sisendi väärtuse x
         int temp = 0; // Ajutine number jaguvuse kontrollimiseks
-        for (int i = 2; i <= num/2; i++){ // Alustab 2-st ja jagab iga järgmise arvuga
+        for (int i = 2; i <= num / 2; i++) { // Alustab 2-st ja jagab iga järgmise arvuga
             temp = num % i;
             //Kuna kontrollime jääki, siis n/2 on mõistlik max i väärtus
             //jagades nt 11:6 või 21:11, ei saa jääk 0 tekkida
-            if (temp == 0){
+            if (temp == 0) {
                 return false;
             }
         }
