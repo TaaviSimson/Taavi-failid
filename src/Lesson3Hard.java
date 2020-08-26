@@ -19,8 +19,20 @@ public class Lesson3Hard {
 
     public static int evenFibonacci(int x){
         // TODO liida kokku kõik paaris fibonacci arvud kuni numbrini x
-
-        return 0;
+        int arv = x;
+        int fib0 = 0;
+        int fib1 = 1;
+        int fibn = 0;
+        int sum = 0;
+        while (fibn <= arv){
+            fibn = fib0+ fib1;
+            fib0 = fib1;
+            fib1 = fibn;
+            if (fibn % 2 == 0){
+                sum += fibn;
+            }
+        }
+        return sum;
     }
 
     public static void randomGame(){
