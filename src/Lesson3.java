@@ -47,7 +47,11 @@ public class Lesson3 {
         } else if (kasklus.equalsIgnoreCase("algarv")) {
             System.out.println("Sisesta arv");
             int a = scanner.nextInt();
-            System.out.println("Sisestatud arv " + algarv(a) + " algarv");
+            if (algarv(a)){
+                System.out.println("\n"+"Sisestatud arv on algarv");
+            } else {
+                System.out.println("\n"+"Sisestatud arv ei ole algarv");
+            }
         } else {
             System.out.println("Sisestasid vale käskluse");
         }
@@ -111,10 +115,15 @@ public class Lesson3 {
 
     public static boolean algarv(int x){//Motle kodus
         // TODO tagasta kas sisestatud arv on primaar arv (jagub ainult 1 ja iseendaga)
-        int a = x;
-        boolean onAlgarv = true;
-
-        return false;
+        int num = x; //Annab numbrile sisendi väärtuse x
+        int temp = 0; // Ajutine number jaguvuse kontrollimiseks
+        for (int i = 2; i <= num/2; i++){ // Alustab 2-st ja jagab iga järgmise arvuga
+            temp = num % i;
+            if (temp == 0){
+                return false;
+            }
+        }
+        return true;
     }
 
 }
