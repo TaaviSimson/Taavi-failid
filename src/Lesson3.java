@@ -58,11 +58,10 @@ public class Lesson3 {
         // Näiteks
         // x = 5
         // return 4*3*2*1 = 24
-        int sum = 0;
+        int a = 1; //Siin peab olema 1, muidu vastus pidevalt 0
         for (int i = 1; i <= x; i++){
-            sum *= i;
-        }
-        int a = sum;
+            a *= i;
+        };
         return a;
     }
 
