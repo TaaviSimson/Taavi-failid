@@ -4,11 +4,11 @@ import java.util.Scanner;
 public class Lesson2 {
 
     public static void main(String[] args) {
-        exercise1();
+        //exercise1();
         //exercise2(4);
         //exercise3(2, 5);
         //fibonacci(5);
-        //exercise5();
+        exercise5();
     }
 
     public static void exercise1() {
@@ -110,8 +110,7 @@ public class Lesson2 {
             maxpikkus = pikkus; //Seab maksimumpikkuse leitud suuriima pikkusega võrdseks
         }
         }
-        System.out.println("");
-        System.out.println("Vastus:");
+        System.out.println("\n"+"Vastus:");
         System.out.println(i+" "+j+" "+maxpikkus);
     }
 
