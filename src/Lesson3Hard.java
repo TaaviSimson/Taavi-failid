@@ -1,3 +1,5 @@
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -72,7 +74,44 @@ public class Lesson3Hard {
     public static String morseCode(String text) {
         // TODO kirjuta programm, mis tagastab sisestatud teksti morse koodis (https://en.wikipedia.org/wiki/Morse_code)
         // Kasuta sümboleid . ja -
-
+        Map<String, String> morseVastavus = new HashMap<String, String>(); //Alguses Map, siis HashMap
+        morseVastavus.put(" "," ");
+        morseVastavus.put("a",".-");
+        morseVastavus.put("b","-...");
+        morseVastavus.put("c","-.-.");
+        morseVastavus.put("d","-..");
+        morseVastavus.put("e",".");
+        morseVastavus.put("f","..-.");
+        morseVastavus.put("g","--.");
+        morseVastavus.put("h","....");
+        morseVastavus.put("i","..");
+        morseVastavus.put("j",".---");
+        morseVastavus.put("k","-.-");
+        morseVastavus.put("l",".-..");
+        morseVastavus.put("m","--");
+        morseVastavus.put("n","-.");
+        morseVastavus.put("o","---");
+        morseVastavus.put("p",".--.");
+        morseVastavus.put("q","--.-");
+        morseVastavus.put("r",".-.");
+        morseVastavus.put("s","...");
+        morseVastavus.put("t","-");
+        morseVastavus.put("u","..-");
+        morseVastavus.put("v","...-");
+        morseVastavus.put("w",".--");
+        morseVastavus.put("x","-..-");
+        morseVastavus.put("y","-.--");
+        morseVastavus.put("z","--..");
+        morseVastavus.put("1",".----");
+        morseVastavus.put("2","..---");
+        morseVastavus.put("3","...--");
+        morseVastavus.put("4","....-");
+        morseVastavus.put("5",".....");
+        morseVastavus.put("6","-....");
+        morseVastavus.put("7","--...");
+        morseVastavus.put("8","---..");
+        morseVastavus.put("9","----.");
+        morseVastavus.put("0","-----");
         return "";
     }
 }
