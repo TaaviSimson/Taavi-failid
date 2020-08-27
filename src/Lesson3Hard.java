@@ -18,7 +18,7 @@ public class Lesson3Hard {
         } else if (kasklus.equalsIgnoreCase("morseCode")) {
             System.out.println("\n" + "Sisesta tekst mida morse koodi panna");
             String tekst = scanner.nextLine();
-            System.out.println("\n"+morseCode(tekst));
+            System.out.println("\n" + morseCode(tekst));
         } else {
             System.out.println("\n" + "Sisestasid tundmatu käskluse");
         }
@@ -80,47 +80,48 @@ public class Lesson3Hard {
         String vastus = "";
 
         Map<String, String> morseVastavus = new HashMap<String, String>(); //Alguses Map, siis HashMap
-        morseVastavus.put(" ", " ");
-        morseVastavus.put("a", ".-");
-        morseVastavus.put("b", "-...");
-        morseVastavus.put("c", "-.-.");
-        morseVastavus.put("d", "-..");
-        morseVastavus.put("e", ".");
-        morseVastavus.put("f", "..-.");
-        morseVastavus.put("g", "--.");
-        morseVastavus.put("h", "....");
-        morseVastavus.put("i", "..");
-        morseVastavus.put("j", ".---");
-        morseVastavus.put("k", "-.-");
-        morseVastavus.put("l", ".-..");
-        morseVastavus.put("m", "--");
-        morseVastavus.put("n", "-.");
-        morseVastavus.put("o", "---");
-        morseVastavus.put("p", ".--.");
-        morseVastavus.put("q", "--.-");
-        morseVastavus.put("r", ".-.");
-        morseVastavus.put("s", "...");
-        morseVastavus.put("t", "-");
-        morseVastavus.put("u", "..-");
-        morseVastavus.put("v", "...-");
-        morseVastavus.put("w", ".--");
-        morseVastavus.put("x", "-..-");
-        morseVastavus.put("y", "-.--");
-        morseVastavus.put("z", "--..");
-        morseVastavus.put("1", ".----");
-        morseVastavus.put("2", "..---");
-        morseVastavus.put("3", "...--");
-        morseVastavus.put("4", "....-");
-        morseVastavus.put("5", ".....");
-        morseVastavus.put("6", "-....");
-        morseVastavus.put("7", "--...");
-        morseVastavus.put("8", "---..");
-        morseVastavus.put("9", "----.");
-        morseVastavus.put("0", "-----");
+        morseVastavus.put(" ", "   ");
+        morseVastavus.put("a", ".- ");
+        morseVastavus.put("b", "-... ");
+        morseVastavus.put("c", "-.-. ");
+        morseVastavus.put("d", "-.. ");
+        morseVastavus.put("e", ". ");
+        morseVastavus.put("f", "..-. ");
+        morseVastavus.put("g", "--. ");
+        morseVastavus.put("h", ".... ");
+        morseVastavus.put("i", ".. ");
+        morseVastavus.put("j", ".--- ");
+        morseVastavus.put("k", "-.- ");
+        morseVastavus.put("l", ".-.. ");
+        morseVastavus.put("m", "-- ");
+        morseVastavus.put("n", "-. ");
+        morseVastavus.put("o", "--- ");
+        morseVastavus.put("p", ".--. ");
+        morseVastavus.put("q", "--.- ");
+        morseVastavus.put("r", ".-. ");
+        morseVastavus.put("s", "... ");
+        morseVastavus.put("t", "- ");
+        morseVastavus.put("u", "..- ");
+        morseVastavus.put("v", "...- ");
+        morseVastavus.put("w", ".-- ");
+        morseVastavus.put("x", "-..- ");
+        morseVastavus.put("y", "-.-- ");
+        morseVastavus.put("z", "--.. ");
+        morseVastavus.put("1", ".---- ");
+        morseVastavus.put("2", "..--- ");
+        morseVastavus.put("3", "...-- ");
+        morseVastavus.put("4", "....- ");
+        morseVastavus.put("5", "..... ");
+        morseVastavus.put("6", "-.... ");
+        morseVastavus.put("7", "--... ");
+        morseVastavus.put("8", "---.. ");
+        morseVastavus.put("9", "----. ");
+        morseVastavus.put("0", "----- ");
 
         while (i < muudetudTekst.length()) {
-
-            vastus = vastus + morseVastavus.get(muudetudTekst.substring(i, i+1));
+            vastus = vastus + morseVastavus.get(muudetudTekst.substring(i, i + 1));
+            //morsevastavus.get võtab tähele vastava morsekoodi lõigu
+            //Substring võtab lõigu stringist kohal i kuni j .substring (i,j)
             i++;
         }
         return vastus;
