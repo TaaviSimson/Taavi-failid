@@ -17,6 +17,7 @@ public class Lesson3Hard {
             randomGame();
         } else if (kasklus.equalsIgnoreCase("morseCode")) {
             System.out.println("\n" + "Sisesta tekst mida morse koodi panna");
+            System.out.println("Tekst olgu inglise keelses tähestikus ja ilma kirjavahemärkideta.");
             String tekst = scanner.nextLine();
             System.out.println("\n" + morseCode(tekst));
         } else {

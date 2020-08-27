@@ -1,4 +1,6 @@
 import java.math.BigDecimal;
+import java.math.MathContext;
+import java.math.RoundingMode;
 import java.util.Scanner;
 
 public class Lesson2 {
@@ -8,7 +10,8 @@ public class Lesson2 {
         //exercise2(4);
         //exercise3(2, 5);
         //fibonacci(5);
-        exercise5();
+        //exercise5();
+        exercise7();
     }
 
     public static void exercise1() {
@@ -129,6 +132,11 @@ public class Lesson2 {
         BigDecimal b = new BigDecimal("394486820345");
         BigDecimal c = new BigDecimal("15");
         BigDecimal d = new BigDecimal("4");
+        BigDecimal vastus = new BigDecimal(0);  //Miks hall?
+        vastus = b.divide(c, RoundingMode.HALF_UP); // RoundingMode.HALF_UP
+        vastus = vastus.subtract(d);
+        vastus = a.multiply(vastus);
+        System.out.println(vastus);
     }
 
     public static void exercise8() {
