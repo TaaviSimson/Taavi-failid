@@ -5,17 +5,20 @@ import java.util.Scanner;
 public class Lesson3Hard {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Sisestka käsklus: evenFibonacci, randomGame");
+        System.out.println("Sisestka käsklus: evenFibonacci, randomGame või morseCode");
         String kasklus = scanner.nextLine();
-        System.out.println("");
         if (kasklus.equalsIgnoreCase("evenFibonacci")) {
-            System.out.println("Sisesta number milleni soovid Fibonacci jada paaris arvud liita");
+            System.out.println("\n"+"Sisesta number milleni soovid Fibonacci jada paaris arvud liita");
             int a = scanner.nextInt();
             System.out.println("\n" + "Arvuni " + a + " on Fibonacci jada paaris numbrite summa on " + evenFibonacci(a));
         } else if (kasklus.equalsIgnoreCase("randomGame")) {
             randomGame();
-        } else {
-            System.out.println("Sisestasid tundmatu käskluse");
+        } else if (kasklus.equalsIgnoreCase("morseCode")){
+            System.out.println("\n"+"Sisesta tekst mida morse koodi panna");
+            String tekst = scanner.nextLine();
+            System.out.println(morseCode(tekst));
+        } else{
+            System.out.println("\n"+"Sisestasid tundmatu käskluse");
         }
     }
 
@@ -42,7 +45,7 @@ public class Lesson3Hard {
         // iga kord pärast kasutaja sisestatud täis arvu peab programm ütlema kas number oli suurem või väiksem
         // ja kasutaja peab saama uuesti arvata
         // numbri ära aramise korral peab programm välja trükkima mitu katset läks numbri ära arvamiseks
-        System.out.println("Arva ära number vahemikus 0-100");
+        System.out.println("\n"+"Arva ära number vahemikus 0-100");
         System.out.println("Sul on 10 katset");
         Random random = new Random();
         int i = random.nextInt(100); //Voi (int) (Math.random() * 100 +1);
@@ -69,6 +72,7 @@ public class Lesson3Hard {
     public static String morseCode(String text) {
         // TODO kirjuta programm, mis tagastab sisestatud teksti morse koodis (https://en.wikipedia.org/wiki/Morse_code)
         // Kasuta sümboleid . ja -
+
         return "";
     }
 }
