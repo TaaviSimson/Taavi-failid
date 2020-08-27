@@ -1,4 +1,5 @@
 import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.math.MathContext;
 import java.math.RoundingMode;
 import java.util.Scanner;
@@ -11,7 +12,8 @@ public class Lesson2 {
         //exercise3(2, 5);
         //fibonacci(5);
         //exercise5();
-        exercise7();
+        //exercise7();
+        exercise8();
     }
 
     public static void exercise1() {
@@ -20,14 +22,14 @@ public class Lesson2 {
 
         // TODO loe sisse konsoolist 10 täisarvu
         System.out.println("Sisesta 10 täisarvu");
-        for (int i =0; i < m.length; i++) {
+        for (int i = 0; i < m.length; i++) {
             Scanner scanner = new Scanner(System.in); //loob uue skänneri
             m[i] = scanner.nextInt();// Annab numbrile m kohal i väärtuse
         }
         System.out.println("");
         // TODO trüki arvud välja vastupidises järiekorras
-        for (int i = m.length-1; i >= 0; i--) {
-            System.out.print(m[i]+" ");
+        for (int i = m.length - 1; i >= 0; i--) {
+            System.out.print(m[i] + " ");
         }
     }
 
@@ -39,8 +41,8 @@ public class Lesson2 {
         Scanner scanner = new Scanner(System.in); //loob uue skänneri
         int a = scanner.nextInt();
         System.out.println("");
-        for(int i=1; i <= a; i++){
-            System.out.println(2*i);
+        for (int i = 1; i <= a; i++) {
+            System.out.println(2 * i);
         }
         // Sisend 5
         // Väljund 2 4 6 8 10
@@ -54,9 +56,9 @@ public class Lesson2 {
         int x1 = scanner.nextInt();
         int y1 = scanner.nextInt();
         System.out.println("");
-        for (int i=1; i <= x1; i++){
-            for (int j = 1; j <= y1; j++){
-                System.out.print(i*j+" ");//print println asemel jätab ühele reale
+        for (int i = 1; i <= x1; i++) {
+            for (int j = 1; j <= y1; j++) {
+                System.out.print(i * j + " ");//print println asemel jätab ühele reale
             }
             System.out.println();//Tekitab uue rea kui i on iga j-ga läbi korrutatud
         }
@@ -77,7 +79,7 @@ public class Lesson2 {
         int fib1 = 0;
         int fib2 = 1;
         int fibn = 0;
-        for (int i = 0; i < n1-2; i++){
+        for (int i = 0; i < n1 - 2; i++) {
             fibn = fib1 + fib2;// fibn = fib1+ fib2 = 0 + 1 = 1
             //fibn vastab fib3 (kolmas number jadas), seepärast n1-2
             fib1 = fib2; // fib1 = 1
@@ -109,12 +111,12 @@ public class Lesson2 {
                 }
                 pikkus++;//Suurendab k1 jada pikkuse lugerit
             }
-        if (maxpikkus < pikkus){ //Võrleb hetkel olevat maksimumpikkust leitud pikkusega
-            maxpikkus = pikkus; //Seab maksimumpikkuse leitud suuriima pikkusega võrdseks
+            if (maxpikkus < pikkus) { //Võrleb hetkel olevat maksimumpikkust leitud pikkusega
+                maxpikkus = pikkus; //Seab maksimumpikkuse leitud suuriima pikkusega võrdseks
+            }
         }
-        }
-        System.out.println("\n"+"Vastus:");
-        System.out.println(i+" "+j+" "+maxpikkus);
+        System.out.println("\n" + "Vastus:");
+        System.out.println(i + " " + j + " " + maxpikkus);
     }
 
     public static void exercise6() {
@@ -132,10 +134,10 @@ public class Lesson2 {
         BigDecimal b = new BigDecimal("394486820345");
         BigDecimal c = new BigDecimal("15");
         BigDecimal d = new BigDecimal("4");
-        BigDecimal vastus = new BigDecimal(0);  //Miks hall?
-        vastus = b.divide(c, RoundingMode.HALF_UP); // RoundingMode.HALF_UP
+        BigDecimal vastus = b.divide(c, 2, RoundingMode.HALF_UP); // RoundingMode.HALF_UP, 2. kohta peale koma
         vastus = vastus.subtract(d);
-        vastus = a.multiply(vastus);
+        a = a.round(new MathContext(3)); //new MathContext, kui varem pole kasutanud
+        vastus = a.multiply(vastus);//Multiply korral round ei saa kasutada
         System.out.println(vastus);
     }
 
@@ -149,7 +151,14 @@ public class Lesson2 {
         VASTUS:
         Õige summa: 77378062799264987173249634924670947389130820063105651135266574
          */
+        Scanner scanner = new Scanner(System.in);
+
+        BigInteger vastus = new BigInteger("0");
+
+        vastus = vastus +j;
+        System.out.println("Vastus on: ");
     }
+
 
     public static void exercise9() {
         /* TODO
