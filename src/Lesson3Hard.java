@@ -8,34 +8,34 @@ public class Lesson3Hard {
         System.out.println("Sisestka käsklus: evenFibonacci");
         String kasklus = scanner.nextLine();
         System.out.println("");
-        if (kasklus.equalsIgnoreCase("evenFibonacci")){
+        if (kasklus.equalsIgnoreCase("evenFibonacci")) {
             System.out.println("Sisesta number milleni soovid Fibonacci jada paaris arvud liita");
             int a = scanner.nextInt();
-            System.out.println("\n"+"Arvuni "+a+" on Fibonacci jada paaris numbrite summa on "+evenFibonacci(a));
-        } else{
+            System.out.println("\n" + "Arvuni " + a + " on Fibonacci jada paaris numbrite summa on " + evenFibonacci(a));
+        } else {
             System.out.println("Sisestasid tundmatu käskluse");
         }
     }
 
-    public static int evenFibonacci(int x){
+    public static int evenFibonacci(int x) {
         // TODO liida kokku kõik paaris fibonacci arvud kuni numbrini x
-        int arv = x;
         int fib0 = 0;
         int fib1 = 1;
         int fibn = 0;
         int sum = 0;
-        while (fibn <= arv){
-            fibn = fib0+ fib1;
-            fib0 = fib1;
-            fib1 = fibn;
-            if (fibn % 2 == 0){
+        while (fibn <= x) {
+            if (fibn % 2 == 0) {
                 sum += fibn;
             }
+            fibn = fib0 + fib1;
+            fib0 = fib1;
+            fib1 = fibn;
+
         }
         return sum;
     }
 
-    public static void randomGame(){
+    public static void randomGame() {
         // TODO kirjuta mäng mis võtab suvalise numbri 0-100, mille kasutaja peab ära arvama
         // iga kord pärast kasutaja sisestatud täis arvu peab programm ütlema kas number oli suurem või väiksem
         // ja kasutaja peab saama uuesti arvata
@@ -45,7 +45,7 @@ public class Lesson3Hard {
         System.out.println(i);
     }
 
-    public static String morseCode(String text){
+    public static String morseCode(String text) {
         // TODO kirjuta programm, mis tagastab sisestatud teksti morse koodis (https://en.wikipedia.org/wiki/Morse_code)
         // Kasuta sümboleid . ja -
         return "";
