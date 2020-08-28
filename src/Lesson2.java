@@ -161,7 +161,7 @@ public class Lesson2 {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        //Scanner scanner = new Scanner(System.in);
+        Scanner input = new Scanner(file);
         BigInteger vastus = new BigInteger("0");
 
         //vastus = vastus.add(b(i));;
