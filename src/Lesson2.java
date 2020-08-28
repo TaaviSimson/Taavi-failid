@@ -1,3 +1,5 @@
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.math.MathContext;
@@ -151,12 +153,19 @@ public class Lesson2 {
         VASTUS:
         Õige summa: 77378062799264987173249634924670947389130820063105651135266574
          */
-        Scanner scanner = new Scanner(System.in);
-
+        File file = new File("C:\\Users\\opilane\\IdeaProjects\\Taavi-failid\\150-numbrit.txt");
+        //Käsklus File file = new File() toob soovitava faili programmi
+        Scanner scanner = null; //Proovib leida faili, kui ei leia, annab erori
+        try {
+            scanner = new Scanner(file);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        //Scanner scanner = new Scanner(System.in);
         BigInteger vastus = new BigInteger("0");
 
-        vastus = vastus +j;
-        System.out.println("Vastus on: ");
+        //vastus = vastus.add(b(i));;
+        System.out.println("Vastus on: "+vastus);
     }
 
 
